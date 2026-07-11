@@ -1,0 +1,10 @@
+services:
+  churn-dashboard:
+    build: .
+    image: churn-signal-dashboard:latest
+    container_name: churn-signal-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data:ro
+    restart: unless-stopped

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: chance-signal-hub
+    runtime: docker
+    plan: free
+    region: frankfurt
+    healthCheckPath: /
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production

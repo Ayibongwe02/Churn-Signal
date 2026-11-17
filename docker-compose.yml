@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    ports:
+      - "10000:10000"
+    environment:
+      PORT: "10000"
+      NODE_ENV: production
+    restart: unless-stopped
